@@ -52,12 +52,15 @@ export const Success = ({ weather }) => {
       </span>
       <div className="px-6 py-4">
         <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-          humidy {weather.humidity} %
+          humidy {weather.humidity}%
         </span>
         <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
           windspeed {weather.wind} m/s
         </span>
       </div>
+      <button className="mb-2" onClick={() => toggleF()}>
+        {f ? 'view celsius' : 'view fahrenheit'}
+      </button>
     </div>
   )
 }
