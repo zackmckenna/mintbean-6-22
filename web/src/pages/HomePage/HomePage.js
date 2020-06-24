@@ -79,7 +79,7 @@ const HomePage = () => {
                   name="zip"
                   placeholder="zip code"
                   maxLength="5"
-                  validation={{ required: true, pattern: /^\d{5}$/ }}
+                  // validation={{ required: true, pattern: /^\d{5}$/ }}
                 />
                 <Submit className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   Submit
