@@ -1,5 +1,4 @@
 import BasicLayout from 'src/layouts/BasicLayout'
-import BlogPostsCell from 'src/components/BlogPostsCell'
 
 const HomePage = () => {
   return (
