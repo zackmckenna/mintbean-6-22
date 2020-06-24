@@ -71,7 +71,7 @@ const HomePage = () => {
             <h1 className="text-6xl font-extrabold">AirQ</h1>
             <p>whats your air quality?</p>
           </span>
-          <span className="block text-gray-700 text-center rounded px-4 py-2 mt-2">
+          <span className="block text-gray-700 text-center justify-center rounded px-4 py-2 mt-2">
             <div>
               <Form className="flex" onSubmit={onSubmit}>
                 <TextField

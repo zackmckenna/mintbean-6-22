@@ -39,7 +39,7 @@ export const Success = ({ weather }) => {
   }
 
   return (
-    <div className="text-center max-w-screen-sm rounded overflow-hidden mt-3 shadow-lg">
+    <div className="text-center border max-w-screen-sm rounded overflow-hidden mt-3 shadow-lg">
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{weather.city} </div>
         <p className="text-gray-700 text-5xl">
