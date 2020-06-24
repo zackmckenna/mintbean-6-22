@@ -66,6 +66,14 @@ const BasicLayout = ({ children }) => {
               >
                 weather
               </Link> */}
+              <a
+                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                rel="no-referrer"
+                target="_blank"
+                href="https://zackmckenna.com"
+              >
+                made by zackmckenna
+              </a>
             </div>
           </div>
         </nav>
