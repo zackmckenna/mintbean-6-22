@@ -43,13 +43,8 @@ export const Success = ({ weather }) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{weather.city} </div>
         <p className="text-gray-700 text-5xl">
-          <button
-            className="bg-blue-500 max-w-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={() => toggleF()}
-          >
-            {f ? weather.temp : weather.tempC}&deg;{f ? 'F' : 'C'}{' '}
-            {weather.conditions}
-          </button>
+          {f ? weather.temp : weather.tempC}&deg;{f ? 'F' : 'C'}{' '}
+          {weather.conditions}
         </p>
       </div>
       <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
