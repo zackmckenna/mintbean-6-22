@@ -48,24 +48,24 @@ const BasicLayout = ({ children }) => {
             }`}
           >
             <div className="text-sm lg:flex-grow">
-              <Link
+              {/* <Link
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 to={routes.home()}
               >
                 Home
-              </Link>
+              </Link> */}
               <Link
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 to={routes.about()}
               >
                 Air Quality 101
               </Link>
-              <Link
+              {/* <Link
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 to={routes.weather()}
               >
                 weather
-              </Link>
+              </Link> */}
             </div>
           </div>
         </nav>

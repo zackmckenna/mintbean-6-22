@@ -15,6 +15,10 @@ export const getWeather = async ({ zip }) => {
     city: json.name,
     conditions: json.weather[0].main,
     temp: Math.round(((json.main.temp - 273.15) * 9) / 5 + 32),
+    tempF: Math.round(((json.main.temp - 273.15) * 9) / 5 + 32),
+    tempC: Math.round(json.main.temp - 273.15),
     icon: `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`,
+    humidity: json.main.humidity,
+    wind: json.wind.speed,
   }
 }

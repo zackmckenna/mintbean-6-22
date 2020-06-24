@@ -4,7 +4,11 @@ export const schema = gql`
     city: String!
     conditions: String!
     temp: Int!
+    tempF: Int!
+    tempC: Int!
     icon: String!
+    wind: Float!
+    humidity: Float!
   }
 
   type Query {

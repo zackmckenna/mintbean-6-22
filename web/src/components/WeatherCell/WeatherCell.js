@@ -5,7 +5,10 @@ export const QUERY = gql`
       city
       conditions
       temp
+      tempC
       icon
+      wind
+      humidity
     }
   }
 `
@@ -29,14 +32,25 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ weather }) => {
   return (
-    <section>
-      <h1>{weather.city}</h1>
-      <h2>
-        <img src={weather.icon} style={{ maxWidth: '2rem' }} />
-        <span>
-          {weather.temp}°F and {weather.conditions}
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{weather.city}</div>
+        <p className="text-gray-700 text-5xl">
+          {weather.temp}&deg;F {weather.conditions}
+        </p>
+      </div>
+      {weather.tempC}
+      <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+        <img src={weather.icon} style={{ maxWidth: '4rem' }} />
+      </span>
+      <div className="px-6 py-4">
+        <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+          humidy {weather.humidity} %
         </span>
-      </h2>
-    </section>
+        <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+          windspeed {weather.wind} m/s
+        </span>
+      </div>
+    </div>
   )
 }
