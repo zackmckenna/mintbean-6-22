@@ -4,7 +4,6 @@ export const QUERY = gql`
       zip
       aqi
       discussion
-      category
     }
   }
 `
@@ -16,5 +15,12 @@ export const Empty = () => <div>Empty</div>
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
 export const Success = ({ quality }) => {
-  return JSON.stringify(quality)
+  return (
+    <section>
+      <h1>{quality.aqi}</h1>
+      <h2>
+        <span>{quality.discussion.split('***')[0]}</span>
+      </h2>
+    </section>
+  )
 }
