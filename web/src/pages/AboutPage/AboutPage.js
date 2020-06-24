@@ -55,7 +55,7 @@ const AboutPage = () => {
 
   return (
     <BasicLayout>
-      <div>
+      <div className="container justify-center max-w-screen-sm">
         <h1>Air Quality 101</h1>
         <p>
           The EPA developed the AQI, which reports levels of ozone, particle

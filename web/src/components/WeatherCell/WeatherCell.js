@@ -39,15 +39,19 @@ export const Success = ({ weather }) => {
   }
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="text-center max-w-screen-sm rounded overflow-hidden mt-3 shadow-lg">
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{weather.city}</div>
+        <div className="font-bold text-xl mb-2">{weather.city} </div>
         <p className="text-gray-700 text-5xl">
-          {f ? weather.temp : weather.tempC}&deg;{f ? 'F' : 'C'}{' '}
-          {weather.conditions}
+          <button
+            className="bg-blue-500 max-w-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => toggleF()}
+          >
+            {f ? weather.temp : weather.tempC}&deg;{f ? 'F' : 'C'}{' '}
+            {weather.conditions}
+          </button>
         </p>
       </div>
-      <button onClick={() => toggleF()}>{f ? 'Celcius' : 'far'}</button>
       <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
         <img src={weather.icon} style={{ maxWidth: '4rem' }} />
       </span>

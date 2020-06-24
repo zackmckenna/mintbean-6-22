@@ -13,33 +13,41 @@ const HomePage = () => {
 
   return (
     <BasicLayout>
-      <div className="container text-center mx-auto">
-        <div className="bg-gray-200 p-4">
+      <div className="max-w-screen-sm justify-center container text-center mx-auto">
+        <div className="p-4">
           <span className="rounded block text-gray-700 text-center bg-gray-400 px-4 py-2">
             <h1 className="text-6xl font-extrabold">AirQ</h1>
-            <p>find your AirQ</p>
+            <p>whats your air quality?</p>
           </span>
-          <span className="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2">
-            <div className="flex">
+          <span className="block text-gray-700 text-center rounded bg-gray-400 px-4 py-2 mt-2">
+            <div>
               <Form className="flex" onSubmit={onSubmit}>
                 <TextField
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
                   name="zip"
                   placeholder="Zip code"
                   maxLength="5"
                   validation={{ required: true, pattern: /^\d{5}$/ }}
                 />
                 <Submit className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Go
+                  Submit
                 </Submit>
               </Form>
             </div>
           </span>
+          <div className="justify-center">
+            {zip && <WeatherCell zip={zip} />}
+            {zip && <QualityCell zip={zip} />}
+          </div>
         </div>
-        <div>
-          {zip && <WeatherCell zip={zip} />}
-          {zip && <QualityCell zip={zip} />}
-        </div>
+        <a
+          className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-blue-500 mr-4"
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.airnow.gov/"
+        >
+          data from AirNow.gov
+        </a>
       </div>
     </BasicLayout>
   )

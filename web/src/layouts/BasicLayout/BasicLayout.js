@@ -68,7 +68,7 @@ const BasicLayout = ({ children }) => {
               </Link> */}
               <a
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-                rel="no-referrer"
+                rel="noreferrer"
                 target="_blank"
                 href="https://zackmckenna.com"
               >
