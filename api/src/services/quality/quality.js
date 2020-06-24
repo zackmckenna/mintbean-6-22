@@ -10,4 +10,5 @@ export const getQuality = async ({ zip }) => {
     zip,
     aqi: json[0].AQI,
     discussion: json[0].Discussion,
+  }
 }
