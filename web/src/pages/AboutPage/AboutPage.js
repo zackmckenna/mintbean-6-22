@@ -5,14 +5,38 @@ const AboutPage = () => {
     {
       number: '0 - 50',
       category: 'Good',
-      color: '00e400',
+      color: '#00e400',
       categoryNumber: '1',
     },
     {
       number: '51 - 100',
       category: 'Moderate',
-      color: 'ffff00',
+      color: '#ffff00',
       categoryNumber: '2',
+    },
+    {
+      number: '101 - 150',
+      category: 'Unhealthy for Sensitive Groups',
+      color: '#ff7e00',
+      categoryNumber: '3',
+    },
+    {
+      number: '151 - 200',
+      category: 'Unhealthy',
+      color: '#ff0000',
+      categoryNumber: '4',
+    },
+    {
+      number: '201 - 300',
+      category: 'Very Unhealthy',
+      color: '#8f3f97',
+      categoryNumber: '5',
+    },
+    {
+      number: '301 - 500',
+      category: 'Hazardous',
+      color: '#7e0023',
+      categoryNumber: '6',
     },
   ]
 
@@ -21,7 +45,7 @@ const AboutPage = () => {
       <tr>
         <th className="px-4 py-2">{row.number}</th>
         <th className="px-4 py-2">{row.category}</th>
-        <th style={{ color: `${row.color}` }} className="px-4 py-2">
+        <th style={{ background: row.color }} className="px-4 py-2">
           {row.color}
         </th>
         <th className="px-4 py-2">{row.categoryNumber}</th>
@@ -55,29 +79,7 @@ const AboutPage = () => {
               <th className="px-4 py-2">Category Number</th>
             </tr>
           </thead>
-          <tbody>
-            {tableData.map((row) => generateRow(row))}
-            {/* <tr>
-              <td className="border px-4 py-2">0 - 50</td>
-              <td className="border px-4 py-2">Good</td>
-            </tr>
-            <tr className="bg-gray-100">
-              <td className="border px-4 py-2">51 - 100</td>
-              <td className="border px-4 py-2">Moderate</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2">101 - 150</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2">151 - 200</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2">201 - 300</td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2">301 - 500</td>
-            </tr> */}
-          </tbody>
+          <tbody>{tableData.map((row) => generateRow(row))}</tbody>
         </table>
       </div>
     </BasicLayout>
