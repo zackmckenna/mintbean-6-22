@@ -111,6 +111,9 @@ const HomePage = () => {
           >
             openweathermap.org
           </a>
+          <p className="text-xs font-hairline">
+            developed for Mintbean Hackathon 6-24
+          </p>
         </span>
       </div>
     </BasicLayout>
