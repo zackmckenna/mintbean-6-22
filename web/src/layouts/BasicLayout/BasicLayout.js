@@ -70,17 +70,17 @@ const BasicLayout = ({ children }) => {
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 rel="noreferrer"
                 target="_blank"
-                href="https://zackmckenna.com"
+                href="https://mintbean.io/mb-event/bd7a7182-3898-46ad-b42b-336198f41443"
               >
-                made by zackmckenna
+                Mintbean Hackathon 6-24
               </a>
               <a
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 rel="noreferrer"
                 target="_blank"
-                href="https://mintbean.io/mb-event/bd7a7182-3898-46ad-b42b-336198f41443"
+                href="https://zackmckenna.com"
               >
-                Mintbean Hackathon 6-24
+                made by zackmckenna
               </a>
             </div>
           </div>
