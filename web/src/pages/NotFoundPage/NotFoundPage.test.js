@@ -1,11 +1,11 @@
 import { render } from '@redwoodjs/testing'
 
-import WeatherPage from './WeatherPage'
+import NotFoundPage from './NotFoundPage'
 
-describe('WeatherPage', () => {
+describe('NotFoundPage', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<WeatherPage />)
+      render(<NotFoundPage />)
     }).not.toThrow()
   })
 })
