@@ -7,6 +7,7 @@ export const getQuality = async ({ zip }) => {
     `http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=${zip}&date=${date}&distance=25&API_KEY=5DBA34CF-223A-4431-8A57-8907908C7E43`
   )
   const json = await response.json()
+
   const descriptor = (aqi) => {
     if (aqi >= 0 && aqi <= 50) {
       return 'Good'

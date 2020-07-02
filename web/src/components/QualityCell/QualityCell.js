@@ -22,11 +22,11 @@ export const Success = ({ quality }) => {
   return (
     <div className="max-w-screen-sm border rounded mt-3 overflow-hidden shadow-lg">
       <div style={{ backgroundColor: quality.color }} className="px-6 py-4">
-        <div className="font-bold text-xl text-gray-100 mb-2">
+        <div className={`font-bold text-xl text-black mb-2`}>
           Air Quality Index
         </div>
-        <p className="text-gray-100 text-5xl">{quality.aqi}</p>
-        <p className="text-gray-100">{quality.description}</p>
+        <p className={`text-black text-5xl`}>{quality.aqi}</p>
+        <p className="text-black">{quality.description}</p>
       </div>
       <div className="px-6 py-4">
         {quality.discussion && (
